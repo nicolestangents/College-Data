@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+  /* Text styles */
+body {
+  background-color: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 35
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  font-family: sans-serif
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif
+}
+
+p {
+  font-family: avenir;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* methodology styling */
+.text-row {
+  display: flex;
+  align-items: center; /* Aligns the header and text vertically */
+  gap: 10px; /* Adjusts space between the header and text */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.header {
+  white-space: nowrap; /* Prevents the header from breaking onto a new line */
+  margin: 0;
+}
+
+.content {
+  margin: 0;
+  flex: 1; /* Ensures the text takes up remaining space */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 375px) {
+  .text-row {
+    flex-direction: column; /* Stacks header and content on mobile */
+    align-items: flex-start;
+  }
+  .content {
+    width: auto; 
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<br>
+<h1>National Universities Data (or some creative title here)</h1>
+<h3>Lea Levine, Pavan Acharya, Darya Tadlaoui, Nicole Tan, Mia Schmitt </h3>
+
+<br>
+
+<p> some text introduction here</p>
+
+<div class="flourish-embed flourish-map" data-src="visualisation/20302753"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20302753/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+<p> Rankings taken from U.S. News. Location (latitude/longitude),admissions rate (ADM_RATE), tuition (TUITIONFEE_), and public/private status (CONTROL_PEPS) were taken from College Scorecard. 
+    College Scorecard data is from 2022 (for the class of 2026). </p>
+
+<br>
+
+<div class="flourish-embed flourish-table" data-src="visualisation/20302444"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20302444/thumbnail" width="100%" alt="table visualization" /></noscript></div>
+
+<br> 
+
+<div class="text-row">
+    <h2 class="header">Methodology</h2>
+    <p class="content">overarching methodology here (ex where we got our data from) feajrkeajlrewalrewakrjealwrarewarewajreakwrarearea</p>
+  </div>
