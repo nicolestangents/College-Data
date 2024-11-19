@@ -43,7 +43,7 @@ p {
 
 .header {
   white-space: nowrap; /* Prevents the header from breaking onto a new line */
-  margin: 0;
+  margin: 15;
 }
 
 .content {
@@ -63,27 +63,49 @@ p {
   }
 }
 
+/* margins for data viz */
+.embed-container {
+  max-width: 95%;
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto; 
+}
+
 </style>
 </head>
 
 <body>
 
 <br>
-<h1>National Universities Data (or some creative title here)</h1>
-<h3>Lea Levine, Pavan Acharya, Darya Tadlaoui, <a href="https://nicolestangents.github.io/JOUR-320/">Nicole Tan</a>, Mia Schmitt </h3>
+<h1>A Look at the Top National Universities Data in the U.S.</h1>
+<h3><a href="https://lealevine.github.io/interactives/">Lea Levine</a>, Pavan Acharya, Darya Tadlaoui, <a href="https://nicolestangents.github.io/JOUR-320/">Nicole Tan</a>, Mia Schmitt </h3>
 
 <br>
 
 <p> some text introduction here</p>
 
-<div class="flourish-embed flourish-map" data-src="visualisation/20302753"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20302753/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+<div class="embed-container">
+  <div class="flourish-embed flourish-map" data-src="visualisation/20302753">
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <noscript>
+      <img src="https://public.flourish.studio/visualisation/20302753/thumbnail" width="100%" alt="map visualization" />
+    </noscript>
+  </div>
+</div>
+
 <p> Rankings taken from U.S. News. Location (latitude/longitude),admissions rate (ADM_RATE), tuition (TUITIONFEE_), and public/private status (CONTROL_PEPS) were taken from College Scorecard. 
     College Scorecard data is from 2022 (for the class of 2026). </p>
 
 <br>
 
-<div class="flourish-embed flourish-table" data-src="visualisation/20302444"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20302444/thumbnail" width="100%" alt="table visualization" /></noscript></div>
-
+<div class="embed-container">
+  <div class="flourish-embed flourish-table" data-src="visualisation/20302444">
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <noscript>
+      <img src="https://public.flourish.studio/visualisation/20302444/thumbnail" width="100%" alt="table visualization" />
+    </noscript>
+  </div>
+</div>
 <br> 
 
 <div class="text-row">
