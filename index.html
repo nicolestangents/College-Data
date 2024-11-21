@@ -1,102 +1,144 @@
+<!DOCTYPE html>
 <html>
 <head>
+<title>Top 50 National University Data</title>
+
 <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
   /* Text styles */
-body {
-  background-color: white;
+  body {
+    background-color: white;
+  }
+
+  h1 {
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px; /* Added px */
+  }
+
+  h2 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+  }
+
+  h3 {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Links styling */
+  /* Unvisited */
+  a:link {
+    color: blue;
+  }
+  /* Visited */
+  a:visited {
+    color: rgb(104, 1, 111);
+  }
+  /* Hovering */
+  a:hover {
+    color: rgb(104, 1, 111);
+  }
+
+  /* Head banner styling */
+  .text-overlay {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: flex-start; /* Centers content vertically */
+    background-image: url('Princeton.jpg');
+    background-size: contain; /* Ensures the image fills the container proportionally */
+    background-position: top center; /* Keeps the image centered */
+    background-attachment: fixed; /* Keeps the image fixed for larger screens */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    color: white;
+    text-align: center;
+    padding: 50px; /* Adds spacing around the text */
+    min-height: 550px; /* Sets a minimum height while allowing for dynamic resizing */
+    width: 100%;
+    box-sizing: border-box; /* Includes padding in height calculations */
 }
 
-h1 {
-  color: black;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 35
-}
+  .text-overlay p {
+    font-size: 1.2rem;
+    margin: 5px;
+  }
 
-h2 {
-  color: black;
-  text-align: center;
-  font-size: 25px;
-  font-family: sans-serif
-}
+  @media (max-width: 768px) {
+    .text-overlay {
+      background-attachment: scroll; /* Removes fixed attachment on smaller screens */
+      height: auto; /* Allows the container to resize */
+      background-size: cover;
+    }
+  }
 
-h3 {
-  color: black;
-  text-align: center;
-  font-size: 20px;
-  font-family: sans-serif
-}
-
-p {
-  font-family: avenir;
-  text-align: center;
-  font-size: 15px;
-}
-
-/* links styling */
-/* unvisited */
-a:link {
-  color: blue;
-}
-/* visited */
-a:visited {
-  color: rgb(104, 1, 111);
-}
-/* hovering */
-a:hover {
-  color: rgb(104, 1, 111);
-}
-
-/* methodology styling */
-.text-row {
-  display: flex;
-  align-items: center; /* Aligns the header and text vertically */
-  gap: 10px; /* Adjusts space between the header and text */
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-.header {
-  white-space: nowrap; /* Prevents the header from breaking onto a new line */
-  margin: 15;
-}
-
-.content {
-  margin: 0;
-  flex: 1; /* Ensures the text takes up remaining space */
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 375px) {
+  /* Methodology styling */
   .text-row {
-    flex-direction: column; /* Stacks header and content on mobile */
-    align-items: flex-start;
+    display: flex;
+    align-items: center; /* Aligns the header and text vertically */
+    gap: 10px; /* Adjusts space between the header and text */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
   }
+
+  .header {
+    white-space: nowrap;
+    margin: 15px; /* Added px */
+  }
+
   .content {
-    width: auto; 
-    text-align: left;
+    margin: 0;
+    flex: 1;
   }
-}
 
-/* margins for data viz */
-.embed-container {
-  max-width: 95%;
-  justify-content: center; 
-  align-items: center; 
-  margin: 0 auto; 
-}
+  /* Responsive adjustment for smaller screens */
+  @media (max-width: 375px) {
+    .text-row {
+      flex-direction: column; /* Stacks header and content on mobile */
+      align-items: flex-start;
+    }
+    .content {
+      width: auto;
+      text-align: left;
+    }
+  }
 
+  /* Margins for data visualizations */
+  .embed-container {
+    max-width: 95%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 </style>
 </head>
 
 <body>
+<div class="text-overlay">
+  <p><b>College application season is in full swing.</b></p>
+  <p><b>How will high school seniors decide where to spend the next three to four years of their lives?</b></p>
+</div>
 
-<br>
-<h1>A Look at the Top National Universities Data in the U.S.</h1>
+<h1>A Look at the Top National Universities in the U.S.</h1>
 <h3><a href="https://lealevine.github.io/interactives/">Lea Levine</a>, Pavan Acharya, Darya Tadlaoui, <a href="https://nicolestangents.github.io/JOUR-320/">Nicole Tan</a>, Mia Schmitt </h3>
 
 <br>
 
-<p> some text introduction here</p>
+<p> Some text introduction here.</p>
 
 <div class="embed-container">
   <div class="flourish-embed flourish-map" data-src="visualisation/20302753">
@@ -107,8 +149,7 @@ a:hover {
   </div>
 </div>
 
-<p> Rankings taken from U.S. News. Location (latitude/longitude),admissions rate (ADM_RATE), tuition (TUITIONFEE_), and public/private status (CONTROL_PEPS) were taken from College Scorecard. 
-    College Scorecard data is from 2022 (for the class of 2026). </p>
+<p> Text description here.</p>
 
 <br>
 
@@ -120,9 +161,26 @@ a:hover {
     </noscript>
   </div>
 </div>
-<br> 
+
+<br>
+
+<p>Description here.</p>
+
+<div class="embed-container">
+  <div class="flourish-embed flourish-chart" data-src="visualisation/20309406">
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <noscript>
+      <img src="https://public.flourish.studio/visualisation/20309406/thumbnail" width="100%" alt="chart visualization" />
+    </noscript>
+  </div>
+</div>
+
+<p>Description here.</p>
 
 <div class="text-row">
-    <h2 class="header">Methodology</h2>
-    <p class="content">overarching methodology here (ex where we got our data from) feajrkeajlrewalrewakrjealwrarewarewajreakwrarearea</p>
-  </div>
+  <h2 class="header">Methodology</h2>
+  <p class="content">Overarching methodology here, e.g., where we got our data from.</p>
+</div>
+
+</body>
+</html>
