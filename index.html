@@ -40,6 +40,8 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     font-size: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   /* Links styling */
@@ -62,7 +64,7 @@
     flex-direction: column; /* Stacks content vertically */
     background-image: url('Princeton.jpg');
     background-size: cover; /* Ensures the image fills the container proportionally */
-    background-position: center 40%; /* Keeps the image centered */
+    background-position: center 60%; /* Keeps the image centered */
     background-attachment: fixed; /* Keeps the image fixed for larger screens */
     background-repeat: no-repeat; /* Prevents repeating the image */
     color: white;
@@ -84,6 +86,34 @@
       background-size: cover;
     }
   }
+
+  /* left right boxing */
+
+.image-text-container {
+   display: flex;
+   align-items: center; 
+   gap: 15px;
+   padding: 5%;
+}
+
+.image-text-container .visualization {
+  flex: 3;
+  max-width: 60%;
+}
+
+.image-text-container .list-right {
+   flex: 2;
+}
+
+.image-text-container .list-right p {
+   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column; 
+  }
+}
 
   /* Methodology styling */
   .text-row {
@@ -151,20 +181,19 @@
 
 <p> Text description here.</p>
 
-<br>
-
-<div class="embed-container">
-  <div class="flourish-embed flourish-table" data-src="visualisation/20302444">
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
-    <noscript>
-      <img src="https://public.flourish.studio/visualisation/20302444/thumbnail" width="100%" alt="table visualization" />
-    </noscript>
+<div class="image-text-container">
+  <div class="visualization">
+    <div class="flourish-embed flourish-table" data-src="visualisation/20302444">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+      <noscript>
+        <img src="https://public.flourish.studio/visualisation/20302444/thumbnail" width="100%" alt="table visualization" />
+      </noscript>
+    </div>
+  </div>
+  <div class="list-right">
+    <p>Description here</p>
   </div>
 </div>
-
-<br>
-
-<p>Description here.</p>
 
 <div class="embed-container">
   <div class="flourish-embed flourish-chart" data-src="visualisation/20309406">
@@ -177,10 +206,24 @@
 
 <p>Description here.</p>
 
+<div class="embed-container">
+  <div class="flourish-embed flourish-chart" data-src="visualisation/20377229">
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <noscript>
+      <img src="https://public.flourish.studio/visualisation/20377229/thumbnail" width="100%" alt="chart visualization" />
+    </noscript>
+  </div>
+</div>
+
+<p><b>Admissions rates</b> for the country’s most elite universities have <b>declined dramatically and rapidly</b> in the past 20 years. For example, <span style="color: #E77500;">Princeton University</span> — the highest-ranked post-secondary institution according to U.S. News & World Report — saw its acceptance rate decline more than 63% in the past two decades.</p> 
+<p>Declines during this time frame were consistent between all 10 top-ranked universities in the Report’s ranking for this year. From 2004 to 2024, these schools collectively saw their admissions rate drop an average of about 73%. The <span style="color: #F25422;">California Institute of Technology</span> saw the biggest overall decline in its admittance rate from 2004 to 2023 at about 82% (acceptance rate statistics were not available for <span style="color: #F25422;">Caltech</span> or <span style="color: #8C1515;">Stanford University</span> for the Class of ’28).</p>
+<p><span style="color: #4E2A84;">Northwestern University</span> experienced the largest overall decrease in its acceptance rate by percentage points of all the ranked universities in the past two decades, from 33.26% for the Class of ’08 to 7.50% for the Class of ’28.</p> 
+<p>The acceptance rate drops have been attributed to a larger number of students applying to a larger number of schools in recent admissions cycles. Top universities haven’t necessarily lowered their incoming class sizes — the application pool has simply increased, causing more selectiveness. The adoption of a “test-optional” approach at top schools since the COVID-19 pandemic, by removing requirements for applicants to submit ACT and SAT test scores, has also accelerated growth in the number of overall applicants. </p>
+
 <div class="text-row">
   <h2 class="header">Methodology</h2>
   <p class="content">Overarching methodology here, e.g., where we got our data from.</p>
-</div>
+</div> 
 
 <br>
 
