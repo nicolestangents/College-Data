@@ -185,6 +185,19 @@
     margin: 0 auto;
   }
 
+@media (max-width: 768px) {
+    .embed-container, .embed-smaller-container {
+        max-width: 100%; /* Allow the visualization to take up the full width */
+        margin: 0; /* Remove all margins */
+        padding: 0; /* Remove all padding */
+    }
+
+    .flourish-embed {
+        width: 100%; /* Ensure the embed itself stretches to full width */
+    }
+}
+
+
 </style>
 </head>
 
