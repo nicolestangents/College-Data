@@ -43,6 +43,25 @@
     padding-right: 5%;
   }
 
+/* Text styles for phone*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Makes the main heading slightly smaller */
+  }
+
+  h2 {
+    font-size: 22px; /* Adjusts secondary headings */
+  }
+
+  h3 {
+    font-size: 18px; /* Adjusts tertiary headings */
+  }
+
+  p {
+    font-size: 20px; /* Increases paragraph text size for readability */
+  }
+}
+
 .page-container {
   padding-left: 30px;
   padding-right: 30px; 
@@ -87,9 +106,9 @@
   @media (max-width: 768px) {
     .text-overlay {
       background-attachment: scroll; 
-      height: 100 vh;
+      height: 100vh;
       background-size: cover;
-      background-position: center bottom;
+      background-position: center 50%;
     }
   }
 
