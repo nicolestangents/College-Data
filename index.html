@@ -7,7 +7,6 @@
   html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
   }
 
   /* Text styles */
@@ -19,7 +18,7 @@
     color: black;
     text-align: center;
     font-family: sans-serif;
-    font-size: 35px; /* Added px */
+    font-size: 35px;
   }
 
   h2 {
@@ -38,11 +37,16 @@
 
   p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     padding-left: 5%;
     padding-right: 5%;
   }
+
+.page-container {
+  padding-left: 30px;
+  padding-right: 30px; 
+}
 
   /* Links styling */
   /* Unvisited */
@@ -60,18 +64,18 @@
 
   /* Head banner styling */
   .text-overlay {
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Stacks content vertically */
+    display: flex;
+    flex-direction: column; 
     background-image: url('Princeton.jpg');
-    background-size: cover; /* Ensures the image fills the container proportionally */
-    background-position: center 60%; /* Keeps the image centered */
-    background-attachment: fixed; /* Keeps the image fixed for larger screens */
-    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-size: cover; 
+    background-position: center 60%;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
     color: white;
-    padding: 50px; /* Adds spacing around the text */
-    min-height: 900px; /* Sets a minimum height while allowing for dynamic resizing */
+    padding: 50px;
+    min-height: 900px; 
     width: 100%;
-    box-sizing: border-box; /* Includes padding in height calculations */
+    box-sizing: border-box;
 }
 
   .text-overlay p {
@@ -82,8 +86,8 @@
 
   @media (max-width: 768px) {
     .text-overlay {
-      background-attachment: scroll; /* Removes fixed attachment on smaller screens */
-      height: auto; /* Allows the container to resize */
+      background-attachment: scroll; 
+      height: auto;
       background-size: cover;
     }
   }
@@ -117,28 +121,25 @@
 }
 
   /* Methodology styling */
-  .text-row {
-    display: flex;
-    align-items: center; /* Aligns the header and text vertically */
-    gap: 10px; /* Adjusts space between the header and text */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  }
+  .methodology-box {
+  background-color: #f2f2f2;
+  padding: 20px; 
+  margin: 40px auto; 
+  max-width: 90%; 
+  box-sizing: border-box;
+}
 
-  .header {
-    white-space: nowrap;
-    margin: 15px; /* Added px */
-    margin-left: 5%
-  }
-
-  .content {
-    margin: 0;
-    flex: 1;
-  }
+.methodology-box p {
+  margin: 10px 0; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  line-height: 1.3;
+}
 
   /* Responsive adjustment for smaller screens */
   @media (max-width: 375px) {
     .text-row {
-      flex-direction: column; /* Stacks header and content on mobile */
+      flex-direction: column;
       align-items: flex-start;
     }
     .content {
@@ -168,16 +169,18 @@
 
 <body>
 <div class="text-overlay">
-  <p><b>College application season is in full swing.</b></p>
-  <p><b>How will high school seniors decide where to spend the next three to four years of their lives?</b></p>
+  <p style="text-align: center;"><b>College application season is in full swing.</b></p>
+  <p style="text-align: center;"><b>How will high school seniors decide where to spend the next three to four years of their lives?</b></p>
 </div>
 
+<div class="page-container">
 <h1>A Look at the Top National Universities in the U.S.</h1>
 <h3><a href="https://lealevine.github.io/interactives/">Lea Levine</a>, <a href="https://pavanacharya2002.github.io/interactives/portfolio.html">Pavan Acharya</a>, <a href="https://daryatadlaoui.github.io/interactives/">Darya Tadlaoui</a>, <a href="https://nicolestangents.github.io/JOUR-320/">Nicole Tan</a>, <a href="https://mias13-j1nx.github.io/Interactive1/AboutMe.html">Mia Schmitt</a></h3>
 
 <br>
 
-<p> Some text introduction here.</p>
+<p>With college application season for the 2025–2026 school year in full swing, prospective undergraduates have a number of factors to consider in choosing the right school for them. But the amount of information available online about the thousands of universities in the United States can sometimes be too much. For those feeling overwhelmed, this webpage could be for you!</p>
+<p>This page serves as a resource for students seeking out information about key facts often considered for application and enrollment decisions, such as university rankings, acceptance rates, demographics, location, and tuition costs. The visualizations and maps below aim to help you make the most informed decision as you apply and, eventually, accept enrollment offers. Each visualization serves to not just represent data in an easy-to-understand way but also to provide comprehensive information about the context of this information. Check out each visualization below!</p>
 
 <div class="embed-container">
   <div class="flourish-embed flourish-map" data-src="visualisation/20302753">
@@ -188,8 +191,9 @@
   </div>
 </div>
 
-<p>Ranking data for this map was sourced from U.S. News. Along with this, location (latitude/longitude), admissions rate (ADM_RATE), tuition (TUITIONFEE_), and public/private status (CONTROL_PEPS) were sourced from College Scorecard. It should be noted that College Scorecard data is from 2022 (for the class of 2026).</p>
-<p>We feel this graphic is important in highligting that a <b>majority of top 50 schools are concentrated on the two coasts (particularly the East Coast) and the Midwest</b>. The result of this could mean that students who live in middle America but want to go to a top 50 university will have to go farther from home. Despite CA, TX, and FL being the most populous states, TX only has two top 50 universities and FL only has one. </p>
+<p>The map highlights the <b>significant geographic concentration of top 50 universities along the East and West Coasts</b>, with fewer schools in the Midwest and central United States. This means students residing in middle America or the western regions of the U.S. may need to consider relocating farther from home to attend a top 50 post-secondary institution. Notably, despite California, Texas and Florida being the most populous states, Texas has only two top 50 universities and Florida just one. While California represents about 12% of the nation’s total population, it has a higher proportion of top 50 schools — nine of them, to be exact.</p>
+<p>For prospective college students, <b>geography is a key factor to consider</b> when applying to universities. The geographic of many of the nation’s top universities may influence decisions based on proximity, regional familiarity and access to resources, like family support. Those who prioritize staying closer to home might then consider metrics beyond rankings, such as the strength of particular programs, campus culture and affordability. On the other hand, geographic dispersion may allow students the opportunity to explore regions they are unfamiliar with. Students should also consider their preference for their immediate environment, ranging from a bustling city community to a quieter college town. Many top universities are situated in urban or suburban areas.</p>
+<p>“Going to an elite school won’t make or break your life," said Henry Michaelson, a computer science graduate student at <span style="color: #4E2A84; font-family: 'Courier'; font-size: 19px">Northwestern University</span>. "Even if you don’t believe that now, you’ll probably see that in a few years. And second of all, I’m sure for those people specifically, the process is really stressful. So just try and keep everything in perspective as much as you can.”</p>
 
 <div class="image-text-container">
   <div class="visualization">
@@ -201,7 +205,8 @@
     </div>
   </div>
   <div class="list-right">
-    <p>Data for this graphic was sourced from U.S News 2025 Best National University Rankings. The goal of this graphic is to make rankings easily comprehensible and clear for readers, before they view our other more complex graphics below. This interactive allows readers to search for both university names and rankings, and separate each list into two pages. We hope this graphic serves as clear background information before readers view the rest of our site!</p>
+    <p>Rankings can seem important, but they aren't the be-all and end-all, and they are oftentimes not indicative of the quality of educations students will receive.</p>
+    <p>“You’re already a great student," <span style="color: #4E2A84; font-family: 'Courier'; font-size: 19px">Northwestern University</span> senior Jessica Li said. "It doesn’t really matter what school you go to, because every school will have those opportunities. And if you do know that you can take on those opportunities, you’ll be successful anywhere you go.”</p>
   </div>
 </div>
 
@@ -214,8 +219,12 @@
   </div>
 </div>
 
-<p>Data for this graphic was sourced from U.S. News rankings and College Kickstart, then compiled into a spreadsheet. U.S. News was used for the 2025 and 2016 rankings (2016 was found with the Wayback Machine), College Kickstart used for years 2024-2017. The colors chosen for our data correlate with school colors. Along with this, U.S. News often has schools tied for a certain rank — for example, if two schools are ranked #3, the list then skips to rank #5. To address this, the data shows how the 2025 top twenty schools have fluctuated in rankings throughout the past ten years. </p>
-<p>With the exception of <span style="color: #E77500;">Princeton University</span> and <span style="color: #750014;">MIT</span> (#1 and #2 in rankings), <b>all schools have changed ranks</b>. Most notably, <span style="color: #000d74;">Columbia University</span> dropped from rank #2 to rank #18 in one year. This is because <span style="color: #000d74;">Columbia</span> was discovered to be reporting incorrect statistics to boost their ranking. <span style="color: #4E2A84;">Northwestern University</span> has gradually climbed the rankings over time, most recently jumping to rank #6. The unique format and structure of this graphic allows readers to see a more comprehensive and color coded view of how the rankings of the 2025 U.S. News & World Report have changed in the past 10 years.</p>
+<p>With the exception of <span style="color: #E77500; font-family: 'Courier'; font-size: 19px">Princeton University</span> (ranking first), <b>all schools have shifted ranks</b> once or multiple times in the past decade.</p> 
+<p>As of 2025, U.S. News & World Report determines rankings based on 17 weighted factors, such as graduation rates and assessments by peer institutions. The weight of these rankings is subject to change year-over-year, which may impact a school’s ranking.</p>
+<p>Most notably, <span style="color: #000d74; font-family: 'Courier'; font-size: 19px">Columbia University</span> dropped from <a href="https://www.collegekickstart.com/blog/item/u-s-news-world-report-posts-2023-college-rankings">second overall to 18th</a> in just one year from 2021-22 to 2022-23. The sudden and rapid drop came after a mathematics professor from <span style="color: #000d74; font-family: 'Courier'; font-size: 19px">Columbia</span> accused the school of submitting innacurate and misleading data for the ranking process. <span style="color: #000d74; font-family: 'Courier'; font-size: 19px">Columbia</span> later admitted the accusations were true.</p>
+<p>Further from the coasts, <span style="color: #4E2A84; font-family: 'Courier'; font-size: 19px">Northwestern University</span> has gradually climbed the rankings in the past decade. Since 2016, <span style="color: #4E2A84; font-family: 'Courier'; font-size: 19px">Northwestern</span> has jumped from a 12th overall rank to sixth.</p>
+
+<br>
 
 <div class="embed-smaller-container">
   <div class="flourish-embed flourish-chart" data-src="visualisation/20377229">
@@ -226,12 +235,14 @@
   </div>
 </div>
 
-<p><b>Admissions rates</b> for the country’s most elite universities have <b>declined dramatically and rapidly</b> in the past 20 years. For example, <span style="color: #E77500;">Princeton University</span> — the highest-ranked post-secondary institution according to U.S. News & World Report — saw its acceptance rate decline more than 63% in the past two decades.</p> 
-<p>Declines during this time frame were consistent between all 10 top-ranked universities in the Report’s ranking for this year. From 2004 to 2024, these schools collectively saw their admissions rate drop an average of about 73%. The <span style="color: #F25422;">California Institute of Technology</span> saw the biggest overall decline in its admittance rate from 2004 to 2023 at about 82% (acceptance rate statistics were not available for <span style="color: #F25422;">Caltech</span> or <span style="color: #8C1515;">Stanford University</span> for the Class of ’28).</p>
-<p><span style="color: #4E2A84;">Northwestern University</span> experienced the largest overall decrease in its acceptance rate by percentage points of all the ranked universities in the past two decades, from 33.26% for the Class of ’08 to 7.50% for the Class of ’28.</p> 
-<p>The acceptance rate drops have been attributed to a larger number of students applying to a larger number of schools in recent admissions cycles. Top universities haven’t necessarily lowered their incoming class sizes — the application pool <a href="https://www.forbes.com/sites/christopherrim/2023/11/22/ivy-league-acceptance-rates-are-plummeting-but-not-for-the-reason-you-may-think/">has simply increased</a>, causing more selectiveness. 
-  The adoption of a “test-optional” approach at top schools since the COVID-19 pandemic, by removing requirements for applicants to submit ACT and SAT test scores, has also accelerated growth in the number of overall applicants.</p>
-<p>Admissions rate information for the Class of 2008 through Class of 2026 was collected from College Scorecard datasets from the U.S. Department of Education for each of those years. Data for the Class of 2027 and 2028 was unavailable through the Department of Education. Instead, this information was collected through online sources listed in this <a href="https://docs.google.com/spreadsheets/d/1-rKaU5EapZ8plP3LAhHNbWYXZIViB-vK6LxVdvUQdiU/edit?gid=0#gid=0">publicly available dataset</a>. The acceptance rate for <span style="color: #8C1515;">Stanford University</span> and the <span style="color: #F25422;">California Institute of Technology</span> for the Class of 2028 were both unavailable. We feel that this graphic is important for readers to visualize the stark changes in university acceptance rates overtime.</p>
+<p><b>Admissions rates</b> for the nation’s most elite universities have <b>declined dramatically and rapidly</b> in the past two decades. For example, <span style="color: #E77500; font-family: 'Courier'; font-size: 19px">Princeton University</span> — the highest-ranked post-secondary institution, according to U.S. News & World Report — has seen its acceptance rate decline more than 63% over the past 20 years.</p>
+<p>Acceptance rate declines during this time frame were consistent between all of the current top 10 top-ranked universities. From 2004 to 2024, these schools collectively saw their admissions rate drop an average of about 73%. The <span style="color: #F25422; font-family: 'Courier'; font-size: 19px">California Institute of Technology</span> saw the biggest overall decline in its rate from 2004 to 2023 at about 82% (Acceptance rate statistics were not available for <span style="color: #F25422; font-family: 'Courier'; font-size: 19px">Caltech</span> or <span style="color: #8C1515; font-family: 'Courier'; font-size: 19px">Stanford University</span> for the Class of ’28).</p>
+<p><span style="color: #4E2A84; font-family: 'Courier'; font-size: 19px">Northwestern University</span> experienced the largest overall decrease in its acceptance rate by percentage points of all the ranked universities over the past two decades, from 33.26% for the Class of ’08 to 7.50% for the Class of ’28. </p>
+<p>A larger number of overall applicants applying to a larger number of schools is the key culprit for the rapid acceptance rate decreases seen in elite institutions. Top universities haven’t necessarily lowered their incoming class sizes — the application pool has <a href="https://www.forbes.com/sites/christopherrim/2023/11/22/ivy-league-acceptance-rates-are-plummeting-but-not-for-the-reason-you-may-think/">simply increased</a>, causing more selectiveness. The adoption of a “test-optional” approach at top schools since the COVID-19 pandemic, by removing requirements for applicants to submit ACT and SAT test scores, has also accelerated growth in the number of overall applicants.</p>
+<p>The numbers may seem daunting, but Michaelson said students should just "shoot their shot." </p>
+<p>"You never know what’s gonna happen," he added. "I think a lot of people at Northwestern didn’t think they were going to get in but ended up getting in. So you just never know.”</p>
+
+<br>
 
 <div class="embed-container">
   <div class="flourish-embed flourish-chart" data-src="visualisation/20687573">
@@ -242,14 +253,35 @@
   </div>
 </div>
 
-<p><b>Admissions rates</b> for the country’s most elite universities have <b>declined dramatically and rapidly</b> in the past 20 years. For example, <span style="color: #E77500;">Princeton University</span> — the highest-ranked post-secondary institution according to U.S. News & World Report — saw its acceptance rate decline more than 63% in the past two decades.</p> 
+<p>This graph displays the percentage of undergraduate students who identify as <b>people of color</b> at the current top 25 ranked universities in the nation. The visualization also shows how these numbers have shifted over the past decade. There has been a <b>general upward trend among all colleges</b>, with some minor dips in population makeup throughout each academic year.</p>
+<p>The <span style="color: #F25422; font-family: 'Courier'; font-size: 19px">California Institute of Technology</span> has remained the campus with the highest percentage of students of color of the top 25, starting at 60.5% for the 2013-14 academic year and seeing that percentage rise to 83% for the 2022-23 academic year. While the <span style="color: #FFCB05; font-family: 'Courier'; font-size: 19px">University of Michigan, Ann Arbor</span> started with the lowest respective percentage at 24%, narrowly followed by the <span style="color: #C99700; font-family: 'Courier'; font-size: 19px">University of Notre Dame</span> at 24.1%, <span style="color: #C99700; font-family: 'Courier'; font-size: 19px">Notre Dame</span> now remains at the bottom of the list at 28.8%. </p>
+<p>Understanding the demographics of different universities is important for any prospective college student. This chart aims to help applicants gain a better sense of the level of diversity at various universities to allow them to make a more informed decision about the best fit for them, both academically and from a student body persepctive. Observing these numbers and their fluctuation over time also helps students better recognize efforts made — or not made — by these universities to create a more inclusive campus environment.</p> 
+<br>
 
-<div class="text-row">
-  <h2 class="header">Methodology</h2>
-  <p class="content">Overarching methodology here, e.g., where we got our data from.</p>
-</div> 
+<p>Michaelson and Li offered one last piece of advice for students firing up the Common App page.</p>
+<p>"Stay on top of your deadlines and persevere as much as you can," Michaelson said. "I know this process can be really tough, but the more you persevere, the more you stay on top of your stuff, the better the results are going to be."</p>
+<p>“In your essays, just stay true to yourself and talk about your character," Li added. "Don’t try to make anything too exaggerated. Be honest.”</p>
 
 <br>
+
+<div class="methodology-box">
+  <h2>Methodology and Tool Usage</h2>
+  <p><b>Top 50 National Universities Map:</b> Ranking data for this map was sourced from U.S. News & World Report. Along with this, locations (latitude/longitude), admissions rates (ADM_RATE), tuitions (TUITIONFEE_), and public/private statuses (CONTROL_PEPS) were sourced from College Scorecard. It should be noted that the <a href="https://collegescorecard.ed.gov/data">College Scorecard data</a> is from 2022 (for the class of 2026). The previously mentioned information is organized in this <a href="https://docs.google.com/spreadsheets/d/1l3ACrlt5UtNrsZ8mvHYhHtEQRNKLenvEQKx1asyJrwQ/edit?usp=sharing">publicly available spreadsheet</a>.</p>
+  <p>We used Flourish’s Point map feature to place and label each of the U.S.’s top 50 undergraduate universities. Private and public universities are distinguished by color. Additionally, users can enter the name of a top 50 university into a search bar to be able to quickly locate that school on the map. This template allowed us to best display each of these universities while also being able to include key information like admission rates and tuition costs.</p>
+  
+  <p><b>Top 25 National Universities Ranking:</b> Data for this graphic was pulled from U.S News & World Report’s <a href="https://www.usnews.com/best-colleges/rankings/national-universities?_sort=rank&_sortDirection=asc">2025 Best National University Rankings</a>, published earlier this year. The graphic aims to make this ranking easily comprehensible and clear for readers before they view the other more complex visualizations. This interactive allows readers to search for both university names and rankings, and separate each list into two pages.</p>
+  
+  <p><b>Top 20 National Universities Rankings Across the Years:</b>Data for this graphic was sourced from U.S. News & World Report’s rankings from the past decade and College Kickstart. Findings were then compiled into this <a href="https://docs.google.com/spreadsheets/d/1g53S0u0Q0qBt3io3g-4Y0Lv3DaIKjTIq1JR0lll7Cvs/edit?gid=372610107#gid=372610107">publicly available spreadsheet</a>. U.S. News’ rankings for 2024-25 were available on <a href="https://www.usnews.com/best-colleges">its website</a>. The organization’s rankings for the years 2016-17 through 2023-24 were available on the <a href="https://www.collegekickstart.com/blog/category/college-rankings">College Kickstart website</a>. For 2015-16, the Wayback Machine was utilized in order to find an older version of U.S. News’ website.</p>
+    <p>All schools included are considered national universities, which means they offer undergraduate, masters and doctoral programs and participate in faculty research. The colors selected for our data correlate with each institutions’ primary colors. Additionally, U.S. News often has multiple schools sharing the same rank. For example, if two schools are ranked third overall, then the list skips to the fifth rank school next. To address this, the visualization shows how the top 20 schools from 2025 have fluctuated in rankings throughout the past ten years, rather than just the top 10 schools.</p>
+  
+    <p><b>Top 10 National Universities Acceptance Rates Over the Past 2 Decades:</b>Admissions rate information for the Class of 2008 through Class of 2026 was collected from College Scorecard datasets from the U.S. Department of Education for each of those years. Data for the Class of 2027 and 2028 was unavailable through the Department of Education. Instead, this information was collected through online sources listed in this <a href="https://docs.google.com/spreadsheets/d/1-rKaU5EapZ8plP3LAhHNbWYXZIViB-vK6LxVdvUQdiU/edit?gid=0#gid=0">publicly available dataset</a>. The acceptance rates for Stanford University and the California Institute of Technology for the Class of 2028 were both unavailable.</p>
+    <p>Data from the <a href="https://docs.google.com/spreadsheets/d/1-rKaU5EapZ8plP3LAhHNbWYXZIViB-vK6LxVdvUQdiU/edit?gid=0#gid=0">previously referenced dataset</a> was directly copied into Flourish. We used the “Bar Chart Race” feature to display how the admissions rates for each current top 10 school has changed over time. This template allowed us to best display how each school’s rates changed compared to one another. Users can also know the exact acceptance rate for each school by year by toggling to the exact years on the bottom of the graphic.</p>
+  
+    <p><b>Students of Color at the Top 25 National Universities:</b>Information about the current rankings of universities to decipher the top 25 was taken from <a href="https://www.usnews.com/best-colleges">U.S. News & World Report</a>. We then parsed through data from the <a href="https://collegescorecard.ed.gov/data">College Scorecard</a> to find each of these universities from the MERGED2013-2014 set to the MERGED2022-2023 set (the most recent available data). Total percentage of student of color enrollment among undergraduates was found by taking the sum of columns UGDS_BLACK, UGDS_HISPANIC, UGDS_ASIAN, UGDS_AIAN (American Indian/Alaska Native), UGDS_NHPI (Native American/Pacific Islander), AND UGDS_2MOR (2 or more races). These sums were added to this <a href="https://docs.google.com/spreadsheets/d/1K1PcoTdNSMR4wLgqoDTMBtsf3GxSPgsn0pGBvPsy2Eg/edit?usp=sharing">publicly available spreadsheet</a> with each university name and ranking for each academic year. As a note, when combined with the UGDS_WHITE column, the percentages do not total 100 as the UGDS_NRA (non-resident alien) and UGDS_UNKN (unknown) were not used.</p> 
+    <p>The data from the spreadsheet was imported into Flourish in a line graph visualization, with academic year as labels and percentages as values. A legend was added for readability.</p>
+    <br>
+</div>
+</div>
 
 </body>
 </html>
